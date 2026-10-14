@@ -7,11 +7,15 @@
 // Cuidado com os LIMITES: 20 já é Agradavel, 30 já é Quente.
 // =====================================================================
 const { teste, resumo } = require("../teste.js");
-
 function classificarTemperatura(temperatura) {
-  // SEU CÓDIGO AQUI
+  if (temperatura < 20) {
+    return "Frio";
+  } else if (temperatura < 30) {
+    return "Agradavel";
+  } else {
+    return "Quente";
+  }
 }
-
 // ----------------------------- TESTES -----------------------------
 teste("19 -> Frio", () => classificarTemperatura(19), "Frio");
 teste("20 -> Agradavel", () => classificarTemperatura(20), "Agradavel");
