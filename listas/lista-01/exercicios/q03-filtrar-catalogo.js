@@ -14,17 +14,18 @@ const produtos = [
 ];
 
 const nomes = produtos
-  .filter(p => p.estoque > 0 && p.preco <= 20)
-  .map(p => p.nome);
+  .filter((p) => p.estoque > 0 && p.preco <= 20)
+  .map((p) => p.nome);
 
 console.log(nomes);
 
 // Escreva aqui o array que você acha que será exibido:
-const minhaResposta =
-  [];  // <- coloque os nomes aqui, ex.: ["Nome1", "Nome2"]
+const minhaResposta = ["Caderno", "Regua"]; // <- coloque os nomes aqui, ex.: ["Nome1", "Nome2"]
 
 /* Explique aqui filter(), map() e &&:
-
+filter mantém os produtos que passam na condição, 
+e map transforma cada um no seu nome. 
+O && exige que as duas condições sejam verdadeiras, e avalia a segunda só se a primeira for verdadeira.
 */
 
 // ----------------------------- TESTES -----------------------------
