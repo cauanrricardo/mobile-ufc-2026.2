@@ -9,26 +9,22 @@ Precisa do Node.js 18 ou mais novo (por causa do `fetch`). Confira com `node --v
 
 ```bash
 node aula-02-fundamentos/exercicios.js
-node aula-02-fundamentos/solucoes.js
-node aula-08-modularizacao/tarefas/app.js
+node listas/lista-01/exercicios/q01-analisar-valores.js
+node listas/lista-02/pratica.js
 ```
-
-O `package.json` tem `"type": "module"`. Sem isso, o Node não aceita `import`/`export`
-e dá o erro `Cannot use import statement outside a module`.
 
 ## Estrutura
 
 ```
-mobile-ufc/
-├── README.md               ← você está aqui (cronograma de estudo)
-├── simulado-ap1.md         ← questões no estilo da prova, com gabarito
-├── package.json
-├── aula-02-fundamentos/            variáveis, tipos, if/switch, laços
-├── aula-03-funcoes-ternario/       funções, arrow functions, ternário
-├── aula-04-arrays-closures/        escopo, closures, map/filter/reduce
-├── aula-06-objetos-desestruturacao/ objetos, desestruturação, spread
-├── aula-07-spread-rest-fetch/      rest, fetch em APIs reais
-└── aula-08-modularizacao/          import/export, service
+mobile-ufc-2026.2/
+├── README.md                          ← você está aqui (cronograma de estudo)
+├── aula-02-fundamentos/               variáveis, tipos, if/switch, laços
+├── aula-03-funcoes-ternario/          funções, arrow functions, ternário
+├── aula-04-arrays-closures/           escopo, closures, map/filter/reduce
+├── aula-05-objetos-desestruturacao/   objetos, desestruturação, spread
+└── listas/
+    ├── lista-01/                      subjetiva: exercicios/ + resolucoes/
+    └── lista-02/                      objetiva: teoria, questões e prática
 ```
 
 Cada pasta de aula tem:
@@ -48,6 +44,15 @@ Cada pasta de aula tem:
 
 Dica de QA: trate a saída esperada de cada exercício como um caso de teste.
 Se o seu `console.log` não bater com o comentário, o teste falhou.
+
+## Listas de exercícios
+
+Detalhes e teoria em [`listas/`](listas/README.md).
+
+| Lista | Progresso |
+|---|---|
+| Lista 01 (subjetiva) | Q01 a Q07 resolvidas · faltam Q08, Q09, Q10 e Q11 |
+| Lista 02 (objetiva) | material de estudo (teoria, gabarito e prática) |
 
 ## Cronograma até a AP1 (30/09, 18h)
 
