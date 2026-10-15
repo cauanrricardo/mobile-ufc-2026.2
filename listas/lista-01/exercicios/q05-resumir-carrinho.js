@@ -10,7 +10,15 @@
 const { teste, resumo, preservaEntrada } = require("../teste.js");
 
 function resumirCarrinho(itens) {
-  // SEU CÓDIGO AQUI
+  let quantidadeItens = 0;
+  let total = 0;
+
+  for (const n of itens) {
+    total = total + n.preco * n.quantidade;
+    quantidadeItens = quantidadeItens + n.quantidade;
+  }
+
+  return { total: total, quantidadeItens: quantidadeItens };
 }
 
 // ----------------------------- TESTES -----------------------------
@@ -18,11 +26,25 @@ const itens = [
   { nome: "Caderno", preco: 20, quantidade: 2 },
   { nome: "Caneta", preco: 5, quantidade: 3 },
 ];
-teste("exemplo do enunciado", () => resumirCarrinho(itens), { total: 55, quantidadeItens: 5 });
-teste("carrinho vazio", () => resumirCarrinho([]), { total: 0, quantidadeItens: 0 });
-teste("um único produto", () => resumirCarrinho([{ nome: "Mochila", preco: 80, quantidade: 1 }]), {
-  total: 80,
-  quantidadeItens: 1,
+teste("exemplo do enunciado", () => resumirCarrinho(itens), {
+  total: 55,
+  quantidadeItens: 5,
 });
-teste("não altera a entrada", () => preservaEntrada(resumirCarrinho, itens), true);
+teste("carrinho vazio", () => resumirCarrinho([]), {
+  total: 0,
+  quantidadeItens: 0,
+});
+teste(
+  "um único produto",
+  () => resumirCarrinho([{ nome: "Mochila", preco: 80, quantidade: 1 }]),
+  {
+    total: 80,
+    quantidadeItens: 1,
+  },
+);
+teste(
+  "não altera a entrada",
+  () => preservaEntrada(resumirCarrinho, itens),
+  true,
+);
 resumo();
