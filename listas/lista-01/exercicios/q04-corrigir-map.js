@@ -14,12 +14,15 @@
 // =====================================================================
 const { teste, resumo, preservaEntrada } = require("../teste.js");
 
-const dobrar = valores => {
-  // SEU CÓDIGO AQUI
+const dobrar = (valores) => {
+  return valores.map((valor) => {
+    return valor * 2;
+  });
 };
+console.log(dobrar([2, 4, 6]));
 
 /* Explique aqui por que o resultado atual é undefined:
-
+pois o map sem o return o resultado eh undifined
 */
 
 // ----------------------------- TESTES -----------------------------
