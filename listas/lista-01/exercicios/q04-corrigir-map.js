@@ -22,7 +22,7 @@ const dobrar = (valores) => {
 console.log(dobrar([2, 4, 6]));
 
 /* Explique aqui por que o resultado atual é undefined:
-pois o map sem o return o resultado eh undifined
+pois o map sem o return o resultado eh undefined
 */
 
 // ----------------------------- TESTES -----------------------------
